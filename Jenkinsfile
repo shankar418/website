@@ -1,22 +1,23 @@
 pipeline
 {
-agent {label 'node1'}
-stages
-{
-stage{'Build'}
-{
-steps
-{
-
-sh sudo docker build -it masterapp .
-}
-}
-stage{'Website'}
-{
-steps
-{
-sh sudo docker run -itd -p 82:80 --name website-container masterapp
-}
-}
-}
+  
+  agent {label 'node1'}
+  
+  stages
+  {
+    stage('Build')
+    {
+      steps
+      {
+        sh sudo docker build -it masterapp .
+      }
+    }
+    stage('Website')
+    {
+    steps
+      {
+        sh sudo docker run -itd -p 82:80 --name website-container masterapp
+      }
+    }
+  }
 }
