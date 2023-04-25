@@ -10,7 +10,6 @@ pipeline
       steps
       {
         sh "sudo docker build -t masterapp ."
-        sh "sudo docker rm -f $(sudo docker ps -a -q)"
       }
     }
        
