@@ -9,7 +9,7 @@ pipeline
     {
       steps
       {
-        sh "sudo docker build -it masterapp ."
+        sh "sudo docker build -t masterapp ."
       }
     }
     stage('Website')
