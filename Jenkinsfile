@@ -17,7 +17,7 @@ pipeline
     {
     steps
       {
-        sh "sudo docker run -itd --rm -p 82:80 masterapp"
+        sh "sudo docker run -itd --rm -p 82:80 --name website-container masterapp"
       }
     }
     
