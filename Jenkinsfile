@@ -9,7 +9,7 @@ pipeline
     {
       steps
       {
-        sh "sudo docker rm -f ${sudo docker ps -a -q}"
+        //sh "sudo docker rm -f ${sudo docker ps -a -q}"
         sh "sudo docker build -t masterapp ."
       }
     }
@@ -17,7 +17,7 @@ pipeline
     {
     steps
       {
-        sh "sudo docker run -itd -p 82:80 masterapp"
+        sh "sudo docker run -itd --rm -p 82:80 masterapp"
       }
     }
     
