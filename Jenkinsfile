@@ -19,5 +19,8 @@ pipeline
         sh sudo docker run -itd -p 82:80 --name website-container masterapp
       }
     }
+    
   }
+  
+  
 }
